@@ -2,11 +2,11 @@ cmake_minimum_required(VERSION 2.8)
 project(line_detection6)
 add_compile_options(-std=c++11)
 
-set(yaml-cpp_DIR "usr/local/lib/cmake/yaml-cpp/")
 set(OpenCV_DIR "usr/local/share/OpenCV/")
 
 
 find_package(OpenCV 3 REQUIRED)
+set(yaml-cpp_DIR "/usr/local/lib/cmake/yaml-cpp")
 find_package(yaml-cpp REQUIRED)
 find_package(Eigen3 REQUIRED)
 
