@@ -88,6 +88,24 @@
          </MakeCommands>
       </Target>
       </Build>
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/cameraprojection.cpp">
+         <Option target="line_detection6"/>
+      </Unit>
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/cameraprojection.h">
+         <Option target="line_detection6"/>
+      </Unit>
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/linedetector.cpp">
+         <Option target="line_detection6"/>
+      </Unit>
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/linedetector.h">
+         <Option target="line_detection6"/>
+      </Unit>
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/linesegment.cpp">
+         <Option target="line_detection6"/>
+      </Unit>
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/linesegment.h">
+         <Option target="line_detection6"/>
+      </Unit>
       <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/main.cpp">
          <Option target="line_detection6"/>
       </Unit>

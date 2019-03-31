@@ -13,6 +13,6 @@ find_package(Eigen3 REQUIRED)
 include_directories(
     ${YAML_CPP_INCLUDE_DIR})
 
-add_executable(${PROJECT_NAME} "main.cpp")
+add_executable(${PROJECT_NAME} "main.cpp" linedetector.cpp linesegment.cpp cameraprojection.cpp)
 
 target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBRARIES} ${YAML_CPP_LIBRARIES} ${Eigen3_LIBRARIES})
