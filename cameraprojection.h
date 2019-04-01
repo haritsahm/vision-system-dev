@@ -12,11 +12,12 @@
 class CameraProjection
 {
 public:
-    CameraProjection(Eigen::Matrix3d camInt, Eigen::VectorXd distVal, Eigen::MatrixXd camProj);
+    CameraProjection(cv::Mat camInt, cv::Mat distVal, cv::Mat camProj);
+    CameraProjection();
 
-    void setCamIntrinsic(Eigen::MatrixXd camInt);
-    void setDistValue(Eigen::VectorXd distVal);
-    void setCamProj(Eigen::MatrixXd camProj);
+    void setCamIntrinsic(cv::Mat camInt);
+    void setDistValue(cv::Mat distVal);
+    void setCamProj(cv::Mat camProj);
 
     void undinstortPoint(cv::Point2d in, cv::Point2d &res);
     void undinstortPoints(std::vector<cv::Point2d> in, std::vector<cv::Point2d> &res);
@@ -25,9 +26,9 @@ public:
     void convertToIPM(cv::Mat image, std::vector<cv::Point2d> points_in, std::vector<cv::Point2d> points_out,  Eigen::Matrix3d rot, Eigen::Vector3d trans);
 
 private:
-    Eigen::Matrix3d K;
-    Eigen::VectorXd D;
-    Eigen::Matrix<double, 3, 4> P;
+    cv::Mat K;
+    cv::Mat D;
+    cv::Mat P;
 
     double k1,k2,k3,p1,p2;
     double fx,fy,cx,cy;

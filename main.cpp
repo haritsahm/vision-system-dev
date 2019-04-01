@@ -377,6 +377,64 @@ void loadConfig(const string &path)
 
 }
 
+void loadCameraCalibration(const std::string path, Mat &camInt, Mat &distCoeff, Mat &camProj)
+{
+  std::cout << "load camera data" << std::endl;
+  YAML::Node conf = YAML::LoadFile(path.c_str());
+
+  YAML::Node camera_mat = conf["camera_matrix"];
+  int rows = camera_mat["rows"].as<int>();
+  int cols = camera_mat["cols"].as<int>();
+
+  vector<double> data;
+  data.resize(rows*cols);
+
+  if(data.size() == camera_mat["data"].size())
+  {
+    for (std::size_t i=0;i<camera_mat["data"].size();i++)
+      data.at(i) = (camera_mat["data"][i].as<double>());
+
+    camInt=Mat(data).reshape(0,rows);
+  }
+  data.clear();
+
+  YAML::Node dist_coeff = conf["distortion_coefficients"];
+  rows = dist_coeff["rows"].as<int>();
+  cols = dist_coeff["cols"].as<int>();
+  data.resize(rows*cols);
+
+  if(data.size() == dist_coeff["data"].size())
+  {
+    for (std::size_t i=0;i<dist_coeff["data"].size();i++)
+      data.at(i) = (dist_coeff["data"][i].as<double>());
+
+    distCoeff=Mat(data).reshape(0,rows);
+  }
+
+  data.clear();
+
+  YAML::Node proj_mat = conf["projection_matrix"];
+  rows = proj_mat["rows"].as<int>();
+  cols = proj_mat["cols"].as<int>();
+  data.resize(rows*cols);
+
+  if(data.size() == proj_mat["data"].size())
+  {
+    for (std::size_t i=0;i<proj_mat["data"].size();i++)
+      data.at(i) = (proj_mat["data"][i].as<double>());
+
+    camProj=Mat(data).reshape(0,rows);
+  }
+
+  std::cout << "Camera Matrix " << std::endl;
+  std::cout << camInt << std::endl;
+  std::cout << "Distortion Matrix" << std::endl;
+  std::cout << distCoeff << std::endl;
+  std::cout << "Projection Matrix" << std::endl;
+  std::cout << camProj << std::endl;
+
+}
+
 
 int main()
 {
@@ -390,10 +448,14 @@ int main()
         return -1;
     }
 
-    cv::Mat camera_matrix = (Mat1d(3, 3) << 296.374353, 0, 240.5, 0, 296.374353, 180.5, 0, 0, 1);
-    Mat distortionCoefficients = (Mat1d(1, 5) << 0, 0, 0, 0, 0);
+    cv::Mat camera_matrix;
+    Mat distortionCoefficients;
+    Mat camera_projection;
 
-    loadLUT("lut.xml");
+//    loadLUT("lut.xml");
+    loadCameraCalibration("head_camera.yaml", camera_matrix, distortionCoefficients, camera_projection);
+
+
 
     loadConfig(path);
     //    fieldTrackbar();

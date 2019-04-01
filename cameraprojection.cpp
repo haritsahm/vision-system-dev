@@ -3,80 +3,75 @@
 using namespace cv;
 using namespace std;
 
-CameraProjection::CameraProjection(Eigen::Matrix3d camInt, Eigen::VectorXd distVal, Eigen::MatrixXd camProj)
+CameraProjection::CameraProjection(cv::Mat camInt, cv::Mat distVal, cv::Mat camProj)
 {
     this->K = camInt;
-    if(distVal.size() < 5) std::cout << "Warning: Please fill with 5 distortion parameters" << std::endl;
-    else
-        this->D = distVal;
-    if(camProj.rows() !=3 || camProj.cols() !=4) std::cout << "Warning: Please fill with Camera Projection 3x4" << std::endl;
-    else
-        this->P = camProj;
+    this->D = distVal;
 
-    k1 = D(0);
-    k2 = D(1);
-    p1 = D(2);
-    p2 = D(3);
-    k3 = D(4);
+    this->P = camProj;
 
-    fx = K(0,0);
-    fy = K(1,1);
-    cx = K(0,2);
-    cy = K(1,2);
+    k1 = D.at<double>(0,0);
+    k2 = D.at<double>(0,1);
+    p1 = D.at<double>(0,2);
+    p2 = D.at<double>(0,3);
+    k3 = D.at<double>(0,4);
 
-    fx_p= P(0,0);
-    fy_p = P(1,1);
-    cx_p = P(0,2);
-    cy_p = P(1,2);
-    Tx_p = P(0,3);
-    Ty_p = P(1,3);
+    fx = K.at<double>(0,0);
+    fy = K.at<double>(1,1);
+    cx = K.at<double>(0,2);
+    cy = K.at<double>(1,2);
+
+    fx_p= P.at<double>(0,0);
+    fy_p = P.at<double>(1,1);
+    cx_p = P.at<double>(0,2);
+    cy_p = P.at<double>(1,2);
+    Tx_p = P.at<double>(0,3);
+    Ty_p = P.at<double>(1,3);
 
 }
 
+CameraProjection::CameraProjection()
+{
+  K = Mat::ones(3,3,CV_64F);
+  D = Mat::zeros(5,1,CV_64F);
+  P = Mat::ones(3,4,CV_64F);
+}
 
-void CameraProjection::setCamIntrinsic(Eigen::MatrixXd camInt)
+
+void CameraProjection::setCamIntrinsic(cv::Mat camInt)
 {
     this->K = camInt;
 
-    fx = K(0,0);
-    fy = K(1,1);
-    cx = K(0,2);
-    cy = K(1,2);
+    fx = K.at<double>(0,0);
+    fy = K.at<double>(1,1);
+    cx = K.at<double>(0,2);
+    cy = K.at<double>(1,2);
 
 }
 
-void CameraProjection::setDistValue(Eigen::VectorXd distVal)
+void CameraProjection::setDistValue(cv::Mat distVal)
 {
 
-    if(distVal.size() < 5) std::cout << "Warning: Please fill with 5 distortion parameters" << std::endl;
-    else
-    {
+
         this->D = distVal;
-        k1 = D(0);
-        k2 = D(1);
-        p1 = D(2);
-        p2 = D(3);
-        k3 = D(4);
-    }
+        k1 = D.at<double>(0,0);
+        k2 = D.at<double>(0,1);
+        p1 = D.at<double>(0,2);
+        p2 = D.at<double>(0,3);
+        k3 = D.at<double>(0,4);
 
 
 }
 
-void CameraProjection::setCamProj(Eigen::MatrixXd camProj)
+void CameraProjection::setCamProj(cv::Mat camProj)
 {
-    if(camProj.rows() !=3 || camProj.cols() !=4) std::cout << "Warning: Please fill with Camera Projection 3x4" << std::endl;
-    else
-    {
         this->P = camProj;
-
-        fx_p= P(0,0);
-        fy_p = P(1,1);
-        cx_p = P(0,2);
-        cy_p = P(1,2);
-        Tx_p = P(0,3);
-        Ty_p = P(1,3);
-    }
-
+        fx_p= P.at<double>(0,0);
+        fy_p = P.at<double>(1,1);
+        cx_p = P.at<double>(0,2);
+        cy_p = P.at<double>(1,2);
+        Tx_p = P.at<double>(0,3);
+        Ty_p = P.at<double>(1,3);
 }
 
 void CameraProjection::undinstortPoint(Point2d in, Point2d &res)

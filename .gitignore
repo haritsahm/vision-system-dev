@@ -1,5 +1,5 @@
 CMakeCache.txt
-CMakeLists.txt.*
+CMakeLists.txt.user.*
 CMakeFiles
 CMakeScripts
 Testing
@@ -9,5 +9,5 @@ install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
 *.mp4
-*.cbp
+linedetection6.cbp
 paper.pdf

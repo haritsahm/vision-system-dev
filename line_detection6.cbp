@@ -5,41 +5,91 @@
       <Option title="line_detection6" />
       <Option makefile_is_custom="1" />
       <Option compiler="gcc" />
-      <Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\usr\local\share\OpenCV\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\yaml-cpp\;CMake Files\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\;" />
+      <Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\..\usr\local\share\OpenCV\;CMake Files\..\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\yaml-cpp\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\eigen3\;" />
       <Build>
       <Target title="all">
-         <Option working_dir="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev" />
+         <Option working_dir="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev" />
          <Option type="4" />
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/vision-system-dev/Makefile&quot;  VERBOSE=1 all" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/vision-system-dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="edit_cache">
-         <Option working_dir="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev" />
+         <Option working_dir="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev" />
          <Option type="4" />
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/vision-system-dev/Makefile&quot;  VERBOSE=1 edit_cache" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/vision-system-dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 edit_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="projection_test">
+         <Option output="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/projection_test" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/local/include/opencv" />
+            <Add directory="/usr/local/lib/cmake/yaml-cpp/../../../include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 projection_test" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="projection_test/fast">
+         <Option output="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/projection_test" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/local/include/opencv" />
+            <Add directory="/usr/local/lib/cmake/yaml-cpp/../../../include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 projection_test/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="rebuild_cache">
-         <Option working_dir="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev" />
+         <Option working_dir="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev" />
          <Option type="4" />
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/vision-system-dev/Makefile&quot;  VERBOSE=1 rebuild_cache" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/vision-system-dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="line_detection6">
-         <Option output="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/line_detection6" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev" />
+         <Option output="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/line_detection6" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
@@ -51,20 +101,20 @@
             <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
             <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
             <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
-            <Add directory="/usr/lib/x86_64-linux-gnu/cmake/yaml-cpp/../../../../include" />
             <Add directory="/usr/local/include" />
             <Add directory="/usr/local/include/opencv" />
+            <Add directory="/usr/local/lib/cmake/yaml-cpp/../../../include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/vision-system-dev/Makefile&quot;  VERBOSE=1 line_detection6" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/vision-system-dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 line_detection6" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       <Target title="line_detection6/fast">
-         <Option output="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/line_detection6" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev" />
+         <Option output="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/line_detection6" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
@@ -76,68 +126,73 @@
             <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
             <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
             <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
-            <Add directory="/usr/lib/x86_64-linux-gnu/cmake/yaml-cpp/../../../../include" />
             <Add directory="/usr/local/include" />
             <Add directory="/usr/local/include/opencv" />
+            <Add directory="/usr/local/lib/cmake/yaml-cpp/../../../include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/vision-system-dev/Makefile&quot;  VERBOSE=1 line_detection6/fast" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/vision-system-dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+            <Build command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 line_detection6/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
       </Build>
-      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/cameraprojection.cpp">
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/cameraprojection.cpp">
+         <Option target="projection_test"/>
          <Option target="line_detection6"/>
       </Unit>
-      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/cameraprojection.h">
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/cameraprojection.h">
+         <Option target="projection_test"/>
          <Option target="line_detection6"/>
       </Unit>
-      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/linedetector.cpp">
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/linedetector.cpp">
          <Option target="line_detection6"/>
       </Unit>
-      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/linedetector.h">
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/linedetector.h">
          <Option target="line_detection6"/>
       </Unit>
-      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/linesegment.cpp">
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/linesegment.cpp">
          <Option target="line_detection6"/>
       </Unit>
-      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/linesegment.h">
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/linesegment.h">
          <Option target="line_detection6"/>
       </Unit>
-      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/main.cpp">
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/main.cpp">
          <Option target="line_detection6"/>
       </Unit>
-      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/CMakeLists.txt">
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/projection_test.cpp">
+         <Option target="projection_test"/>
+      </Unit>
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/CMakeLists.txt">
           <Option virtualFolder="CMake Files\" />
       </Unit>
-      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/../../../../../usr/local/share/OpenCV/OpenCVConfig-version.cmake">
-          <Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\" />
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/../../../../../../usr/local/share/OpenCV/OpenCVConfig-version.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\share\OpenCV\" />
       </Unit>
-      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/../../../../../usr/local/share/OpenCV/OpenCVConfig.cmake">
-          <Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\" />
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/../../../../../../usr/local/share/OpenCV/OpenCVConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\share\OpenCV\" />
       </Unit>
-      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/../../../../../usr/local/share/OpenCV/OpenCVModules.cmake">
-          <Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\" />
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/../../../../../../usr/local/share/OpenCV/OpenCVModules.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\share\OpenCV\" />
       </Unit>
-      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/../../../../../usr/local/share/OpenCV/OpenCVModules-release.cmake">
-          <Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\" />
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/../../../../../../usr/local/share/OpenCV/OpenCVModules-release.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\share\OpenCV\" />
       </Unit>
-      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/../../../../../usr/lib/x86_64-linux-gnu/cmake/yaml-cpp/yaml-cpp-config-version.cmake">
-          <Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\yaml-cpp\" />
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/../../../../../../usr/local/lib/cmake/yaml-cpp/yaml-cpp-config-version.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\yaml-cpp\" />
       </Unit>
-      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/../../../../../usr/lib/x86_64-linux-gnu/cmake/yaml-cpp/yaml-cpp-config.cmake">
-          <Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\yaml-cpp\" />
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/../../../../../../usr/local/lib/cmake/yaml-cpp/yaml-cpp-config.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\yaml-cpp\" />
       </Unit>
-      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/../../../../../usr/lib/x86_64-linux-gnu/cmake/yaml-cpp/yaml-cpp-targets.cmake">
-          <Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\yaml-cpp\" />
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/../../../../../../usr/local/lib/cmake/yaml-cpp/yaml-cpp-targets.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\yaml-cpp\" />
       </Unit>
-      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/../../../../../usr/lib/x86_64-linux-gnu/cmake/yaml-cpp/yaml-cpp-targets-release.cmake">
-          <Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\yaml-cpp\" />
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/../../../../../../usr/local/lib/cmake/yaml-cpp/yaml-cpp-targets-release.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\yaml-cpp\" />
       </Unit>
-      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/vision-system-dev/../../../../../usr/lib/cmake/eigen3/Eigen3Config.cmake">
-          <Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\" />
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/../../../../../../usr/lib/cmake/eigen3/Eigen3Config.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\eigen3\" />
       </Unit>
    </Project>
 </CodeBlocks_project_file>
