@@ -11,3 +11,4 @@ CTestTestfile.cmake
 *.mp4
 linedetection6.cbp
 paper.pdf
+/dataset/

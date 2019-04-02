@@ -77,10 +77,39 @@ void CameraProjection::setCamProj(cv::Mat camProj)
 void CameraProjection::undinstortPoint(Point2d in, Point2d &res)
 {
 
+  double x = (in.x - cx) / fx;
+  double y = (in.y - cy) / fy;
+
+  double r2 = x*x + y*y;
+
+  // Radial distorsion
+  double xDistort = x * (1 + k1 * r2 + k2 * r2 * r2 + k3 * r2 * r2 * r2);
+  double yDistort = y * (1 + k1 * r2 + k2 * r2 * r2 + k3 * r2 * r2 * r2);
+
+  // Tangential distorsion
+  xDistort = xDistort + (2 * p1 * x * y + p2 * (r2 + 2 * x * x));
+  yDistort = yDistort + (p1 * (r2 + 2 * y * y) + 2 * p2 * x * y);
+
+  // Back to absolute coordinates.
+  xDistort = xDistort * fx + cx;
+  yDistort = yDistort * fy + cy;
+
+  res = Point2d(xDistort,yDistort);
+
 }
 
 void CameraProjection::undinstortPoints(std::vector<Point2d> in, std::vector<Point2d> &res)
 {
+  std::vector<Point2d> temp;
+  undistortPoints(in, temp, K, D);
+  for(auto point_: temp)
+  {
+    // Back to absolute coordinates.
+    point_.x = point_.x * fx + cx;
+    point_.y = point_.y * fy + cy;
+
+    res.push_back(point_);
+  }
 
 }
 

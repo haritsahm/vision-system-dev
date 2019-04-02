@@ -42,12 +42,25 @@ int main()
   dist_points.push_back(Point2d(453,140));
   dist_points.push_back(Point2d(578,89));
 
+  undistort(image, out, camera_matrix, distortionCoefficients);
+//  undistortPoints(dist_points, undist_points, camera_matrix, distortionCoefficients);
+  projection_.undinstortPoints(dist_points, undist_points);
+
+
   for(auto point: dist_points)
   {
     circle(image, point, 2, Scalar(100,0,244));
   }
-
-  undistort(image, out, camera_matrix, distortionCoefficients,matCam);
+  double fx = camera_matrix.at<double>(0,0);
+  double fy = camera_matrix.at<double>(1,1);
+  double cx = camera_matrix.at<double>(0,2);
+  double cy = camera_matrix.at<double>(1,2);
+  for(auto point: undist_points)
+  {
+//    point.x = point.x * fx + cx;
+//    point.y = point.y * fy + cy;
+    circle(out, point, 2, Scalar(244,12,89));
+  }
 
   imshow("original", image);
   imshow("undistrot", out);
