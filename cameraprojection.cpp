@@ -74,7 +74,7 @@ void CameraProjection::setCamProj(cv::Mat camProj)
         Ty_p = P.at<double>(1,3);
 }
 
-void CameraProjection::undinstortPoint(Point2d in, Point2d &res)
+void CameraProjection::undinstortPoint(Point2d &in, Point2d &res)
 {
 
   double x = (in.x - cx) / fx;
@@ -83,22 +83,24 @@ void CameraProjection::undinstortPoint(Point2d in, Point2d &res)
   double r2 = x*x + y*y;
 
   // Radial distorsion
-  double xDistort = x * (1 + k1 * r2 + k2 * r2 * r2 + k3 * r2 * r2 * r2);
-  double yDistort = y * (1 + k1 * r2 + k2 * r2 * r2 + k3 * r2 * r2 * r2);
+  double xDistort = x * (1 + (k1*r2 + k2*r2 + k3*r2*r2)*r2);
+  double yDistort = y * (1 + (k1*r2 + k2*r2 + k3*r2*r2)*r2);
 
   // Tangential distorsion
-  xDistort = xDistort + (2 * p1 * x * y + p2 * (r2 + 2 * x * x));
-  yDistort = yDistort + (p1 * (r2 + 2 * y * y) + 2 * p2 * x * y);
+  xDistort = xDistort + (2*p1*x*y) + p2*(r2+2*x*x);
+  yDistort = yDistort + p1*(r2+2*y*y) + (2*p2*x*y);
 
-  // Back to absolute coordinates.
+//  // Back to absolute coordinates.
   xDistort = xDistort * fx + cx;
   yDistort = yDistort * fy + cy;
 
-  res = Point2d(xDistort,yDistort);
+  // Back to absolute coordinates.
+  res.x = in.x * fx + cx;
+  res.y = in.y * fy + cy;
 
 }
 
-void CameraProjection::undinstortPoints(std::vector<Point2d> in, std::vector<Point2d> &res)
+void CameraProjection::undinstortPoints(std::vector<Point2d> &in, std::vector<Point2d> &res, cv::Size size)
 {
 
   std::vector<Point2d> temp;
@@ -106,35 +108,50 @@ void CameraProjection::undinstortPoints(std::vector<Point2d> in, std::vector<Poi
   for(auto point_: temp)
   {
     // To relative coordinates <- this is the step you are missing.
-  //  double x = (point_.x - cx) / fx;
-  //  double y = (point_.y - cy) / fy;
+//    double x = (point_.x - cx) / fx;
+//    double y = (point_.y - cy) / fy;
 
-  //  double r2 = x*x + y*y;
+//    double centerx = (size.width/2 - cx)/fx;
+//    double centery = (size.height/2 - cy)/fy;
 
-  //  // Radial distorsion
-  //  double xDistort = x * (1 + k1 * r2 + k2 * r2 * r2 + k3 * r2 * r2 * r2);
-  //  double yDistort = y * (1 + k1 * r2 + k2 * r2 * r2 + k3 * r2 * r2 * r2);
+//    double diff_x = x-centerx;
+//    double diff_y = y-centery;
 
-  //  // Tangential distorsion
-  //  xDistort = xDistort + (2 * p1 * x * y + p2 * (r2 + 2 * x * x));
-  //  yDistort = yDistort + (p1 * (r2 + 2 * y * y) + 2 * p2 * x * y);
+//    double r2 = diff_x*diff_x+diff_y*diff_y;
+//    double r4 = r2*r2;
+//    double r6 = r4*r2;
 
-  //  // Back to absolute coordinates.
-  //  xDistort = xDistort * fx + cx;
-  //  yDistort = yDistort * fy + cy;
+//    // Radial distorsion
+//    double pixelDistort = (1 + k1*r2 + k2*r4 + k3*r6);
 
-    // Back to absolute coordinates.
-    point_.x = point_.x * fx + cx;
-    point_.y = point_.y * fy + cy;
+//    // Tangential distorsion
+//    double tanDistX = (2*p1*x*y) + p2*(r2+2*x*x);
+//    double tanDistY = p1*(r2+2*y*y) + (2*p2*x*y);
 
-    res.push_back(point_);
+//    // Back to absolute coordinates.
+//    double xCorr = x*pixelDistort+tanDistX;
+//    double yCorr = y*pixelDistort+tanDistY;
+
+    double u = point_.x*fx+cx;
+    double v = point_.y*fy+cy;
+
+    res.push_back(Point2d(u, v));
   }
 
 }
 
-void CameraProjection::convertToIPM(Mat image, std::vector<Point2d> points_in,
-                                    std::vector<Point2d> points_out, Eigen::Matrix3d rot,
-                                    Eigen::Vector3d trans)
+void CameraProjection::convertToIPM(cv::Mat &in, cv::Mat &out, double &tilt)
+{
+  Mat R = (Mat_<double>(4,4) << 1, 0, 0, 0,
+           0, cos(tilt*DEGREE2RADIAN), -sin(tilt*DEGREE2RADIAN), 0,
+           0, sin(tilt*DEGREE2RADIAN), cos(tilt*DEGREE2RADIAN), 0,
+           0, 0, 0, 1);
+
+}
+
+void CameraProjection::convertToIPM(Mat image, std::vector<Point2d> &points_in,
+                                    std::vector<Point2d> &points_out, Eigen::Matrix3d &rot,
+                                    Eigen::Vector3d &trans)
 {
 
 }

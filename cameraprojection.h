@@ -9,6 +9,9 @@
 
 #include <eigen3/Eigen/Eigen>
 
+#define DEGREE2RADIAN M_PI/180
+
+
 class CameraProjection
 {
 public:
@@ -19,11 +22,15 @@ public:
     void setDistValue(cv::Mat distVal);
     void setCamProj(cv::Mat camProj);
 
-    void undinstortPoint(cv::Point2d in, cv::Point2d &res);
-    void undinstortPoints(std::vector<cv::Point2d> in, std::vector<cv::Point2d> &res);
+    void undinstortPoint(cv::Point2d &in, cv::Point2d &res);
+    void undinstortPoints(std::vector<cv::Point2d> &in, std::vector<cv::Point2d> &res, cv::Size size);
 
 
-    void convertToIPM(cv::Mat image, std::vector<cv::Point2d> points_in, std::vector<cv::Point2d> points_out,  Eigen::Matrix3d rot, Eigen::Vector3d trans);
+    void convertToIPM(cv::Mat image, std::vector<cv::Point2d> &points_in,
+                      std::vector<cv::Point2d> &points_out, Eigen::Matrix3d &rot,
+                      Eigen::Vector3d &trans);
+    void convertToIPM(cv::Mat &in, cv::Mat &out, double &tilt);
+
 
 private:
     cv::Mat K;

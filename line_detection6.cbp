@@ -27,66 +27,6 @@
             <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
-      <Target title="projection_test">
-         <Option output="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/projection_test" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev" />
-         <Option object_output="./" />
-         <Option type="1" />
-         <Option compiler="gcc" />
-         <Compiler>
-            <Add directory="/usr/include" />
-            <Add directory="/usr/include/c++/5" />
-            <Add directory="/usr/include/c++/5/backward" />
-            <Add directory="/usr/include/x86_64-linux-gnu" />
-            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
-            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
-            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
-            <Add directory="/usr/local/include" />
-            <Add directory="/usr/local/include/opencv" />
-            <Add directory="/usr/local/lib/cmake/yaml-cpp/../../../include" />
-         </Compiler>
-         <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 projection_test" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
-         </MakeCommands>
-      </Target>
-      <Target title="projection_test/fast">
-         <Option output="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/projection_test" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev" />
-         <Option object_output="./" />
-         <Option type="1" />
-         <Option compiler="gcc" />
-         <Compiler>
-            <Add directory="/usr/include" />
-            <Add directory="/usr/include/c++/5" />
-            <Add directory="/usr/include/c++/5/backward" />
-            <Add directory="/usr/include/x86_64-linux-gnu" />
-            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
-            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
-            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
-            <Add directory="/usr/local/include" />
-            <Add directory="/usr/local/include/opencv" />
-            <Add directory="/usr/local/lib/cmake/yaml-cpp/../../../include" />
-         </Compiler>
-         <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 projection_test/fast" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
-         </MakeCommands>
-      </Target>
-      <Target title="rebuild_cache">
-         <Option working_dir="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev" />
-         <Option type="4" />
-         <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 rebuild_cache" />
-            <CompileFile command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
-         </MakeCommands>
-      </Target>
       <Target title="line_detection6">
          <Option output="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/line_detection6" prefix_auto="0" extension_auto="0" />
          <Option working_dir="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev" />
@@ -137,14 +77,127 @@
             <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="projection_test">
+         <Option output="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/projection_test" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/local/include/opencv" />
+            <Add directory="/usr/local/lib/cmake/yaml-cpp/../../../include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 projection_test" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="projection_test/fast">
+         <Option output="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/projection_test" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/local/include/opencv" />
+            <Add directory="/usr/local/lib/cmake/yaml-cpp/../../../include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 projection_test/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="IPMtest">
+         <Option output="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/IPMtest" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/local/include/opencv" />
+            <Add directory="/usr/local/lib/cmake/yaml-cpp/../../../include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 IPMtest" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="IPMtest/fast">
+         <Option output="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/IPMtest" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/local/include/opencv" />
+            <Add directory="/usr/local/lib/cmake/yaml-cpp/../../../include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 IPMtest/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/haritsahm/Documents/Belajar\ Kodingan/Alfarobi-Vision/vision-system-dev/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
       </Build>
       <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/cameraprojection.cpp">
-         <Option target="projection_test"/>
          <Option target="line_detection6"/>
+         <Option target="projection_test"/>
       </Unit>
       <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/cameraprojection.h">
-         <Option target="projection_test"/>
          <Option target="line_detection6"/>
+         <Option target="projection_test"/>
+      </Unit>
+      <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/ipm.cpp">
+         <Option target="IPMtest"/>
       </Unit>
       <Unit filename="/home/haritsahm/Documents/Belajar Kodingan/Alfarobi-Vision/vision-system-dev/linedetector.cpp">
          <Option target="line_detection6"/>

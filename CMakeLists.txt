@@ -14,7 +14,9 @@ include_directories(
 add_executable(${PROJECT_NAME} "main.cpp" linedetector.cpp linesegment.cpp cameraprojection.cpp)
 
 add_executable(projection_test projection_test.cpp cameraprojection.cpp)
+add_executable(IPMtest ipm.cpp)
 
 target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBRARIES} ${YAML_CPP_LIBRARIES} ${Eigen3_LIBRARIES})
 target_link_libraries(projection_test ${OpenCV_LIBRARIES} ${YAML_CPP_LIBRARIES} ${Eigen3_LIBRARIES})
+target_link_libraries(IPMtest ${OpenCV_LIBRARIES} ${YAML_CPP_LIBRARIES} ${Eigen3_LIBRARIES})
 

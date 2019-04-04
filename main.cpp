@@ -472,13 +472,6 @@ int main()
     RawBGRImg = image;
 
     cvtColor(RawBGRImg, RawHSVImg, CV_BGR2HSV);
-    /*
-     * White from LUT
-     */
-
-    //        Mat whiteLUT = Mat::zeros(RawHSVImg.size(), CV_8UC1);
-    //        updateLUT(RawHSVImg, whiteLUT);
-
 
     /*
      * Find Contour, get field mask
@@ -505,15 +498,15 @@ int main()
       {
         vector<vector<Point> > hullPoints = vector<vector<Point> > (1, ConvexHullPoints);
 
-        //            polylines( image, ConvexHullPoints, true, Scalar(255,0,0), 2 );
+        //    polylines( image, ConvexHullPoints, true, Scalar(255,0,0), 2 );
         //    fillPoly(drawing, ConvexHullPoints, Scalar(255,255,255), 2);
         drawContours(fieldConvectHull, hullPoints, -1, Scalar(255), CV_FILLED);
       }
     }
 
     /*
-        * Field Edge Point
-        */
+     * Field Edge Point
+     */
 
     Mat cleanField;
     cv::bitwise_and(fieldBinary, fieldConvectHull, cleanField);
@@ -547,8 +540,8 @@ int main()
 
 
     /*
-       * Field Line
-       */
+     * Field Line
+     */
     Mat out, lines_img;
     Mat lines_out;
     Mat set = image.clone();
@@ -556,11 +549,11 @@ int main()
     bitwise_and(inv_field, out, lines_img);
     set.copyTo(lines_out, lines_img);
 
-//    if(counter % 27 == 0)
-//    {
-//      string name = "image-" + std::to_string(counter) + ".jpg";
-//      imwrite( "dataset/" + name, lines_out );
-//    }
+    //    if(counter % 27 == 0)
+    //    {
+    //      string name = "image-" + std::to_string(counter) + ".jpg";
+    //      imwrite( "dataset/" + name, lines_out );
+    //    }
 
     cvtColor(lines_out, lines_out, CV_BGR2GRAY);
     blur( lines_out, lines_out, Size(3,3) );
@@ -583,10 +576,10 @@ int main()
     }
 
     vector<LineSegment> filteredLines;
-    //        if(rawLines.size() > 1)
-    //        {
-    //            filteredLines = ld_->scanLine(rawLines);
-    //        }
+    if(rawLines.size() > 1)
+    {
+      filteredLines = ld_->scanLine(rawLines);
+    }
 
     if(filteredLines.size() > 0)
     {
@@ -607,14 +600,14 @@ int main()
       }
     }
 
-    //        imshow("line hsv", cdstP);
+    imshow("line hsv", cdstP);
 
     if(waitKey(30) == 27) break;
-    else if(waitKey(30) == 's') saveConfig(path);
+//    else if(waitKey(30) == 's') saveConfig(path);
 
-    //        waitKey();
+//    waitKey(1);
 
-    counter++;
+//    counter++;
   }
 
   std::cout << "finished"  <<std::endl;
