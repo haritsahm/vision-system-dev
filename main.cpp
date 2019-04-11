@@ -478,6 +478,10 @@ void loadCameraCalibration(const std::string path, Mat &camInt, Mat &distCoeff, 
 
 }
 
+void scanGoalie(std::vector<LineSegment> &lines, std::vector<cv::Point> &field_points, std::vector<LineSegment> &goal_posts)
+{
+
+}
 
 int main()
 {
@@ -566,7 +570,7 @@ int main()
 
         Mat cleanField;
         cv::bitwise_and(fieldBinary, fieldConvectHull, cleanField);
-        //        vector<Point> fieldBoundary = locateFieldPoints(cleanField);
+        vector<Point> fieldBoundary = locateFieldPoints(cleanField);
         //    Vec4d fieldLines; Point pt1, pt2;
 
         //    for(int i = 0; i < fieldBoundary.size(); i++)
@@ -575,30 +579,6 @@ int main()
         //    }
 
 
-
-        /*
-     * Field Line Poitns
-     */
-
-        Mat inv_field = Mat::zeros(cleanField.size(), CV_8UC1);
-        bitwise_not(cleanField, inv_field);
-        multiply(inv_field,fieldConvectHull,inv_field);
-
-        //    cv::bitwise_and()
-
-
-        //    vector<Point> linePoints;
-        //    vector<vector<Point> > row_candidate, col_candidate;
-
-        //    scanLine(inv_field, linePoints, row_candidate, col_candidate);
-
-        //    for(int i = 0; i < linePoints.size(); i++)
-        //        circle(image, linePoints[i], 3, Scalar(100,100,255));
-
-
-        /*
-     * Field Line
-     */
         Mat out, lines_img;
         Mat lines_out, outer, outer_mask;
         Mat set = image.clone();
@@ -620,16 +600,34 @@ int main()
         cvtColor(outer, outer_yuv, CV_BGR2YUV);
         inRange(outer_hsv, Scalar(goalieHSV.h0, goalieHSV.s0, goalieHSV.v0), Scalar(goalieHSV.h1, goalieHSV.s1, goalieHSV.v1), goalie_hsv);
         inRange(outer_yuv, Scalar(goalieYUV.h0, goalieYUV.s0, goalieYUV.v0), Scalar(goalieYUV.h1, goalieYUV.s1, goalieYUV.v1), goalie_yuv);
-//        imshow("goalie_yuv", goalie_yuv);
-//        imshow("goalie_hsv", goalie_hsv);
+
         bitwise_and(goalie_hsv, goalie_yuv, goalie_mask);
         set.copyTo(goalie_img, goalie_mask);
 
-        //    if(counter % 27 == 0)
-        //    {
-        //      string name = "image-" + std::to_string(counter) + ".jpg";
-        //      imwrite( "dataset/" + name, lines_out );
-        //    }
+        blur( goalie_img, goalie_img, Size(3,3) );
+        Canny( goalie_img, goalie_img, 100, 300, 3 );
+
+        // Probabilistic Line Transform
+        vector<Vec4i> linesP; // will hold the results of the detection
+        HoughLinesP(goalie_img, linesP, 1, CV_PI/45, 60, 50, 40); // runs the actual detection
+        // Draw the lines
+        vector<LineSegment> raw_goalie;
+        for( size_t i = 0; i < linesP.size(); i++ )
+        {
+            Vec4i l = linesP[i];
+            raw_goalie.push_back(LineSegment(l[0], l[1], l[2], l[3]));
+            //            line( cdstP, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0,123,255), 1, LINE_AA);
+        }
+
+        vector<LineSegment> filteredGoal;
+        if(raw_goalie.size() > 1)
+        {
+            scanGoalie(raw_goalie, fieldBoundary, filteredGoal);
+        }
+
+        /*
+         * Field line
+         */
 
         cvtColor(lines_out, lines_out, CV_BGR2GRAY);
         blur( lines_out, lines_out, Size(3,3) );
@@ -640,7 +638,7 @@ int main()
         Mat cdstP = image.clone();
 
         // Probabilistic Line Transform
-        vector<Vec4i> linesP; // will hold the results of the detection
+//        vector<Vec4i> linesP; // will hold the results of the detection
         HoughLinesP(lines_out, linesP, 1, CV_PI/45, 60, 50, 40); // runs the actual detection
         // Draw the lines
         vector<LineSegment> rawLines;
