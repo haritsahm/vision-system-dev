@@ -12,3 +12,6 @@ CTestTestfile.cmake
 linedetection6.cbp
 paper.pdf
 /dataset/
+./projection_test
+./line_detection6
+./IPMtest
